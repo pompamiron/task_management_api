@@ -1,5 +1,5 @@
-import express from 'express';
-import sequelize from './config/database';
+import express from "express";
+import sequelize from "./config/database";
 
 const app = express();
 const port = 3000;
@@ -7,10 +7,10 @@ const port = 3000;
 sequelize
   .authenticate()
   .then(() => {
-    console.log('Connected to the database.');
+    console.log("Connected to the database.");
   })
   .catch((err) => {
-    console.error('Unable to connect to the database:', err);
+    console.error("Unable to connect to the database:", err);
   });
 
 app.listen(port, () => {
