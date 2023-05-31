@@ -6,7 +6,11 @@
     "start": "ts-node src/server.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix",
-    "migrate": "sequelize-cli db:migrate"
+    "migrate": "sequelize-cli db:migrate",
+    "test": "NODE_ENV=test jest",
+    "build": "tsc",
+    "seed": "npx sequelize-cli db:seed:all",
+    "undo-seed": "npx sequelize-cli db:seed:undo:all"
   },
   "license": "MIT",
   "dependencies": {
