@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import TodoController from '../TodoController';
+
 import db from '../../models';
+import TodoController from '../TodoController';
 
 const { Todo, Subtask } = db;
 

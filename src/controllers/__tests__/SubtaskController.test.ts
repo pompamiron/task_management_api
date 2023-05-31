@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import SubtaskController from '../SubtaskController';
+
 import db from '../../models';
+import SubtaskController from '../SubtaskController';
 
 const { Todo, Subtask } = db;
 
@@ -67,7 +68,6 @@ describe('SubtaskController', () => {
     it('should update a subtask and its parent todo if necessary and return the updated subtask', async () => {
       const subtask = { id: 1, status: 'pending', save: jest.fn() } as unknown as typeof Subtask;
       const findByPkMock = jest.spyOn(Subtask, 'findByPk').mockResolvedValue(subtask);
-      const findByPkTodoMock = jest.spyOn(Todo, 'findByPk').mockResolvedValue({ id: 1, status: 'completed', save: jest.fn() } as unknown as typeof Todo);
 
       req.params = { id: '1' };
       req.body = { status: 'completed' };

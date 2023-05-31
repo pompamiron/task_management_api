@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+
 import db from "../models";
 
 const { Todo, Subtask } = db;

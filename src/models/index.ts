@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Sequelize, DataTypes, Model } from 'sequelize';
+import { DataTypes, Sequelize } from 'sequelize';
 
 import configJson from '../config/config.json';
 

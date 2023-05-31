@@ -1,7 +1,8 @@
+import cors from "cors";
 import express from "express";
+
 import sequelize from "./config/database";
 import routes from "./routes";
-import cors from "cors";
 
 const app = express();
 const port = 3000;

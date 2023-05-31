@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model } from 'sequelize';
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export default function (sequelize: Sequelize): typeof Model {
   class Subtask extends Model {
